@@ -15,8 +15,7 @@ RUN chmod +x /tini
 
 RUN pip install --upgrade pip
 ADD ./requirements.txt /requirements.txt
-RUN pip install -r /requirements.txt
-
+RUN pip install --ignore-installed -r /requirements.txt
 
 COPY ./ /code
 
